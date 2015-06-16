@@ -1,0 +1,71 @@
+#vx-slider > .vx-slider__slide {
+    &.vx-slider__slide--1 {
+        background-color: #f3f3f3;
+
+        .vx-slider__slide__bg {
+            background-image: url("http://riverisland.scene7.com/is/image/RiverIsland/home-devices?$PNG%20Alpha%20Transparency$&scl=2");
+            background-repeat: no-repeat;
+            background-position: 90% center;
+        }
+    }
+
+    &.vx-slider__slide--2 {
+        background-color: #fff;
+
+        .vx-slider__slide__bg {
+            background-image: url("http://riverisland.scene7.com/is/image/RiverIsland/iphone-img?$PNG%20Alpha%20Transparency$&scl=2");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-position: 90% center;
+        }
+    }
+
+    &.vx-slider__slide--3 {
+        background-color: #f3f3f3;
+
+        .vx-slider__slide__bg {
+            background-image: url("http://riverisland.scene7.com/is/image/RiverIsland/ipad-img?$PNG%20Alpha%20Transparency$&scl=2");
+            background-repeat: no-repeat;
+            background-position: 90% center;
+        }
+    }
+
+    .vx-slider__slide__bg {
+        max-width: 1200px;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        margin: 0 auto;
+    }
+}
+
+html #vx-slider-pagination {
+    li {
+        > span > span {
+            border-radius: 100%;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            background: #8dc540;
+            display: block;
+            margin: 0;
+        }
+
+        &.active {
+            > span {
+                // border: 1px dashed white;
+
+                > span {
+                    background: #000;
+                }
+            }
+        }
+
+        &:last-child {
+            // margin: 0;
+       
+        }
+    }
+}
