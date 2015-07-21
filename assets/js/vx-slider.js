@@ -14,7 +14,7 @@
 		options = options || {};
 
 		/**
-		 * [defaults description]
+		 * defaults
 		 * @type {Object}
 		 */
 
@@ -43,49 +43,49 @@
 		options = defaults;
 
 		/**
-		 * [currentSlideIndex description]
+		 * currentSlideIndex description
 		 * @type {Number}
 		 */
 
 		var currentSlideIndex = 0;
 
 		/**
-		 * [ignoreHashChange description]
+		 * ignoreHashChange description
 		 * @type {Boolean}
 		 */
 
 		var ignoreHashChange = false;
 
 		/**
-		 * [bodyTimeout description]
-		 * @type {[type]}
+		 * bodyTimeout description
+		 * @type {type}
 		 */
 
 		var bodyTimeout = null;
 
 		/**
-		 * [body description]
-		 * @type {[type]}
+		 * body description
+		 * @type {type}
 		 */
 
 		var body = null;
 
 		/**
-		 * [scrolling description]
+		 * scrolling description
 		 * @type {Boolean}
 		 */
 
 		var scrolling = false;
 
 		/**
-		 * [mouseWheelTimer description]
+		 * mouseWheelTimer description
 		 * @type {Boolean}
 		 */
 
 		var mouseWheelTimer = false;
 
 		/**
-		 * [mouseWheelScrollStart description]
+		 * mouseWheelScrollStart description
 		 * Indicates when the mouseWheel last invoked a slide event.
 		 * @type {Integer}
 		 */
@@ -93,16 +93,16 @@
 		var mouseWheelScrollStart = 0;
 
 		/**
-		 * [pagination description]
+		 * pagination
 		 * @type {Boolean}
 		 */
 
 		var pagination = false;
 
 		/**
-		 * [isChrome description]
+		 * isChrome description
 		 * @reference http://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome
-		 * @return {Boolean} [description]
+		 * @return {Boolean}
 		 */
 
 		var isChrome = function() {
@@ -115,8 +115,8 @@
 		};
 
 		/**
-		 * [changeViaHash description]
-		 * @return {[type]} [description]
+		 * changeViaHash description
+		 * @return {type}
 		 */
 
 		var changeViaHash = function() {
@@ -131,8 +131,8 @@
 		};
 
 		/**
-		 * [detectHash description]
-		 * @return {[type]} [description]
+		 * detectHash description
+		 * @return {type}
 		 */
 
 		var detectHash = function(){
@@ -146,8 +146,8 @@
 		};
 
 		/**
-		 * [hasTransition description]
-		 * @return {Boolean} [description]
+		 * hasTransition description
+		 * @return {Boolean}
 		 */
 
 		var hasTransition = function(){
@@ -161,8 +161,8 @@
 		}
 
 		/**
-		 * [bindMouseDrag description]
-		 * @return {[type]} [description]
+		 * bindMouseDrag
+		 * @return {type}
 		 */
 
 		var bindMouseDrag = function() {
@@ -180,8 +180,8 @@
 		};
 
 		/**
-		 * [unBindMouseDrag description]
-		 * @return {[type]} [description]
+		 * unBindMouseDrag
+		 * @return {type}
 		 */
 		var unBindMouseDrag = function(){
 			window.onmousedown = function(){};
@@ -189,8 +189,8 @@
 		}
 
 		/**
-		 * [bindTouchSwipe description]
-		 * @return {[type]} [description]
+		 * bindTouchSwipe
+		 * @return {type}
 		 */
 
 		var bindTouchSwipe = function() {
@@ -227,8 +227,8 @@
 		};
 
 		/**
-		 * [unbindTouchSwipe description]
-		 * @return {[type]} [description]
+		 * unbindTouchSwipe
+		 * @return {type}
 		 */
 		var unbindTouchSwipe = function() {
 			$(window).unbind( "touchstart.vxSlider" );
@@ -236,9 +236,9 @@
 		};
 
 		/**
-		 * [mouseWheelHandler description]
-		 * @param  {[type]} e [description]
-		 * @return {[type]}   [description]
+		 * mouseWheelHandler
+		 * @param  {type} e
+		 * @return {type}
 		 */
 
 		var mouseWheelHandler = function( ev ) {
@@ -277,9 +277,9 @@
 		};
 
 		/**
-		 * [isScrollingUp description]
-		 * @param  {[type]}  ev [description]
-		 * @return {Boolean}    [description]
+		 * isScrollingUp description
+		 * @param  {type}  ev
+		 * @return {Boolean}
 		 */
 		var isScrollingUp = function(ev){
 			var e = window.event || ev;
@@ -297,8 +297,8 @@
 		}
 
 		/**
-		 * [bindMouseWheelEvent description]
-		 * @return {[type]} [description]
+		 * bindMouseWheelEvent
+		 * @return {type}
 		 */
 
 		var bindMouseWheelEvent = function() {
@@ -306,16 +306,16 @@
 		};
 
 		/**
-		 * [unBindMouseWheelEvent description]
-		 * @return {[type]} [description]
+		 * unBindMouseWheelEvent
+		 * @return {type}
 		 */
 		var unBindMouseWheelEvent = function(){
 			$(window).unbind('wheel.vxSlider mousewheel.vxSlider DOMMouseScroll.vxSlider MozMousePixelScroll.vxSlider', mouseWheelHandler );
 		};
 
 		/**
-		 * [bindKeyArrows description]
-		 * @return {[type]} [description]
+		 * bindKeyArrows
+		 * @return {type}
 		 */
 
 		var bindKeyArrows = function() {
@@ -331,8 +331,8 @@
 		};
 
 		/**
-		 * [unbindKeyArrows description]
-		 * @return {[type]} [description]
+		 * unbindKeyArrows
+		 * @return {type}
 		 */
 		var unbindKeyArrows = function(){
 			$('input,textarea,select,option', body).unbind('focus.vxSlider blur.vxSlider');
@@ -340,9 +340,9 @@
 		};
 
 		/**
-		 * [slideCallback description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
+		 * slideCallback
+		 * @param  {type} index
+		 * @return {type}
 		 */
 
 		var slideCallback = function( index ) {
@@ -359,9 +359,9 @@
 		};
 
 		/**
-		 * [nthClasses description]
-		 * @param  {[type]} nthClassLimit [description]
-		 * @return {[type]}               [description]
+		 * nthClasses
+		 * @param  {type}
+		 * @return {type}
 		 */
 
 		var nthClasses = function( nthClassLimit ) {
@@ -374,9 +374,9 @@
 		};
 
 		/**
-		 * [jQuerySlide description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
+		 * jQuerySlide
+		 * @param  {type} index
+		 * @return {type}
 		 */
 
 		var jQuerySlide = function( index ) {
@@ -393,9 +393,9 @@
 		};
 
 		/**
-		 * [cssSlide description]
-		 * @param  {[type]} index [description]
-		 * @return {[type]}       [description]
+		 * cssSlide description
+		 * @param  {type} index
+		 * @return {type}
 		 */
 
 		var cssSlide = function( index ) {
@@ -417,8 +417,8 @@
 		}
 
 		/**
-		 * [removeStyling description]
-		 * @return {[type]} [description]
+		 * removeStyling
+		 * @return {type}
 		 */
 		var removeStyling = function(){
 			body.attr('style', '');
@@ -430,7 +430,7 @@
 		};
 
 		/**
-		 * [app description]
+		 * app
 		 * @type {Object}
 		 */
 
@@ -439,7 +439,7 @@
 			nthClasses : nthClasses,
 
 			/**
-			 * [addPagination description]
+			 * addPagination
 			 */
 
 			addPagination : function() {
@@ -473,8 +473,8 @@
 			},
 
 			/**
-			 * [setSpeed description]
-			 * @param {[type]} _speed [description]
+			 * setSpeed
+			 * @param {type} _speed
 			 */
 
 			setSpeed : function( _speed ) {
@@ -488,8 +488,8 @@
 			},
 
 			/**
-			 * [shouldRun description]
-			 * @return {[type]} [description]
+			 * shouldRun
+			 * @return {type}
 			 */
 
 			shouldRun : function() {
@@ -497,8 +497,8 @@
 			},
 
 			/**
-			 * [canSlideUp description]
-			 * @return {[type]} [description]
+			 * canSlideUp
+			 * @return {type}
 			 */
 
 			canSlideUp : function() {
@@ -507,8 +507,8 @@
 			},
 
 			/**
-			 * [canSlideDown description]
-			 * @return {[type]} [description]
+			 * canSlideDown
+			 * @return {type}
 			 */
 
 			canSlideDown : function() {
@@ -517,9 +517,9 @@
 			},
 
 			/**
-			 * [addClasses description]
-			 * @param {[type]} before [description]
-			 * @param {[type]} after  [description]
+			 * addClasses
+			 * @param {type} before
+			 * @param {type} after
 			 */
 
 			addClasses : function( before, after ) {
@@ -535,9 +535,9 @@
 			},
 
 			/**
-			 * [slideToIndex description]
-			 * @param  {[type]} index [description]
-			 * @return {[type]}       [description]
+			 * slideToIndex
+			 * @param  {type}
+			 * @return {type}
 			 */
 
 			slideToIndex : function( index, e ) {
@@ -555,8 +555,8 @@
 			},
 
 			/**
-			 * [unbind description]
-			 * @return {[type]} [description]
+			 * unbind
+			 * @return {type}
 			 */
 			unbind : function(){
 				unBindMouseDrag();
@@ -568,8 +568,8 @@
 			},
 
 			/**
-			 * [rebind description]
-			 * @return {[type]} [description]
+			 * rebind
+			 * @return {type}
 			 */
 			rebind : function() {
 				$('html').addClass('vxSlider');
@@ -577,8 +577,8 @@
 			},
 
 			/**
-			 * [slideDown description]
-			 * @return {[type]} [description]
+			 * slideDown
+			 * @return {type}
 			 */
 
 			slideDown : function(e) {
@@ -591,8 +591,8 @@
 			},
 
 			/**
-			 * [slideUp description]
-			 * @return {[type]} [description]
+			 * slideUp
+			 * @return {type}
 			 */
 
 			slideUp : function(e) {
@@ -605,8 +605,8 @@
 			},
 
 			/**
-			 * [init description]
-			 * @return {[type]} [description]
+			 * init
+			 * @return {type}
 			 */
 
 			init : function() {
